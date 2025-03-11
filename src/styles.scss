@@ -1,1 +1,295 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+// TAGS
+
+body {
+    padding-top: 6rem;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// SPACING AND SIZE
+
+.w-70 {
+    width: 70%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.h-48 {
+    height: 12rem;
+}
+
+.h-64 {
+    height: 16rem;
+}
+
+.px-2rem {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.p-2rem {
+    padding: 2rem;
+}
+
+.text-small {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.pt-6 {
+    padding-top: 6rem;
+}
+
+.px-075 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.mb-6 {
+    padding-bottom: 4rem;
+}
+
+.max-w-4xl {
+    max-width: 56rem;
+}
+
+.max-w-6xl {
+    max-width: 72rem;
+}
+
+.max-w-48 {
+    max-width: 48rem;
+}
+
+.max-w-5xl {
+    max-width: 64rem;
+}
+
+.gap-2rem {
+    gap: 2rem;
+}
+
+.leading-tight {
+    line-height: 1.25;
+}
+
+// COLORS
+
+.bg-blue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(58 134 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-blue:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-gray-200:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
+.text-gray {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+}
+
+.text-blue {
+    --tw-text-opacity: 1;
+    color: rgb(58 134 255 / var(--tw-text-opacity, 1));
+}
+
+.bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gradient-to-b {
+    background-image: linear-gradient(to bottom, #eff6ff, rgba(239, 246, 255, 0));
+}
+
+.bg-gradient-to-t {
+    background-image: linear-gradient(to top, #eff6ff, rgba(239, 246, 255, 0));
+}
+
+.from-blue-50 {
+    background-image: linear-gradient(to bottom, #eff6ff, rgba(239, 246, 255, 0));
+}
+
+.to-indigo-50 {
+    background-image: linear-gradient(to top, #eef2ff, rgba(239, 246, 255, 0));
+}
+
+.text-green-500 {
+    --tw-text-opacity: 1;
+    color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+}
+
+.shadow-tw {
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.bg-blue-tw {
+    --tw-bg-opacity: 1;
+    background-color: rgb(58 134 255 / var(--tw-bg-opacity, 1));
+}
+
+.default-white-btn {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 500;
+    --tw-text-opacity: 1;
+    color: rgb(58 134 255 / var(--tw-text-opacity, 1));
+}
+
+// Media queries
+
+@media (min-width: 768px) {
+    .w-40-md {
+        width: 40%;
+    }
+
+    .w-50-md {
+        width: 50%;
+    }
+
+    .w-70-md {
+        width: 70%;
+    }
+
+    .w-100-md {
+        width: 100%;
+    }
+
+    .text-5xl-md {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .md-grid-cols-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .w-50-lg {
+        width: 50%;
+    }
+
+    .w-70-lg {
+        width: 70%;
+    }
+
+    .w-75-lg {
+        width: 70%;
+    }
+
+    .w-80-lg {
+        width: 80%;
+    }
+
+    .w-100-lg {
+        width: 100%;
+    }
+
+    .lg-grid-cols-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .w-60-xlg {
+        width: 60%;
+    }
+}

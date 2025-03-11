@@ -1,0 +1,99 @@
+<section class="mb-5 pb-5 bg-gradient-to-t bg-gradient-to-b from-blue-50 to-indigo-50">
+    <div class="container-fluid container mx-auto px-6">
+        <div class="w-70-lg mx-auto">
+            <h1 class="text-4xl text-5xl-md first-title fw-bold text-center mb-4 text-black">
+                Blog
+            </h1>
+
+            <p class="text-center text-xl mb-4 text-black">
+                Conteúdo sobre meu dia a dia e paixões: autodisciplina,<br>desenvolvimento pessoal, corrida de rua e
+                muito mais!
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="py-4 bg-white">
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+        <button *ngFor="let category of postsCategories; let index = index"
+            class="px-4 py-2 rounded-5 bg-gray-100 hover:bg-gray-200"
+            [ngClass]="{'active-filter': activeFilter === category}" (click)="filterPosts(category)">
+            {{ category }}
+        </button>
+    </div>
+</section>
+
+<section class="py-5 bg-white" *ngIf="highLightPost">
+    <div [routerLink]="['/blog', highLightPost?.slug]" class="highlight-container mx-auto px-4 cursor-pointer">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gray-50 rounded-3 overflow-hidden shadow-tw">
+                <img [src]="highLightPost?.acf?.thumbnail" class="w-100 h-64 object-fit-cover">
+                <div class="p-2rem">
+                    <div class="flex items-center mb-4">
+                        <span class="category-span text-white rounded-5">
+                            {{ highLightPost?.acf?.category.name }}
+                        </span>
+                        <!-- <span class="text-gray-500 text-small ms-3">5 min de leitura</span> -->
+                    </div>
+                    <h2 class="text-2xl fw-bold mb-3">
+                        {{ highLightPost?.title?.rendered }}
+                    </h2>
+                    <p class="text-gray-600 mb-3">
+                        {{ highLightPost?.acf?.description }}
+                    </p>
+                    <a href="#" class="fw-medium readmore-btn">
+                        Ler mais →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-50 py-5">
+    <div class="container mx-auto px-4">
+        <h1 class="text-3xl fw-bold text-center mb-5 text-black">
+            Posts Recentes
+        </h1>
+
+        <div class="d-grid md-grid-cols-2 lg-grid-cols-3 mx-auto max-w-6xl gap-2rem">
+            <div *ngFor="let post of paginatedPosts" class="bg-white rounded-3 overflow-hidden shadow-tw cursor-pointer"
+                [routerLink]="['/blog', post.slug]">
+                <img [src]="post.acf.thumbnail" alt="Post 1" class="w-100 h-64 object-fit-cover">
+                <div class="p-4">
+                    <div class="flex items-center mb-3">
+                        <span class="bg-gray-100 py-1 px-075 text-gray-800 text-small rounded-5">
+                            {{ post.acf.category.name }}
+                        </span>
+                    </div>
+                    <h3 class="text-xl fw-bold post-title align-content-center">
+                        {{ post.title.rendered }}
+                    </h3>
+                    <p class="text-gray-600 mb-3 description">
+                        {{ post.acf.description }}
+                    </p>
+                    <a [routerLink]="['/blog', post.slug]" class="fw-medium readmore-btn">
+                        Ler mais →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-center mt-5">
+            <button (click)="previousPage()" [disabled]="currentPage === 1"
+                class="paginator-btn bg-gray-100 hover:bg-gray-200">
+                ←
+            </button>
+            <span *ngFor="let page of getPages()" (click)="goToPage(page)" class="paginator-btn"
+                [ngClass]="{'bg-blue text-white': currentPage === page, 'bg-gray-200': currentPage !== page}">
+                {{ page }}
+            </span>
+            <button (click)="nextPage()" [disabled]="currentPage === totalPages"
+                class="paginator-btn bg-gray-100 hover:bg-gray-200">
+                →
+            </button>
+        </div>
+    </div>
+</section>
+
+<app-newsletter></app-newsletter>

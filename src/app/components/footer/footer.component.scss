@@ -1,0 +1,45 @@
+footer {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hr-color {
+  --tw-border-opacity: 1;
+  border-color: rgb(98 121 154);
+}
+
+.titles {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+ul>li {
+  margin-bottom: 2.5%;
+}
+
+ul>li>svg {
+  --tw-text-opacity: 1;
+  color: rgb(58 134 255 / var(--tw-text-opacity, 1));
+  margin-right: 3%;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.socialMediaLinks:hover {
+  --tw-text-opacity: 1;
+  color: rgb(58 134 255 / var(--tw-text-opacity, 1));
+}
+
+.newsletter-input {
+  outline: none;
+  border: none;
+}
+
+.newsletter-submit {
+  outline: none;
+  border: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(58 134 255 / var(--tw-bg-opacity, 1));
+}

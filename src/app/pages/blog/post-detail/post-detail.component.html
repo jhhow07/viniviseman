@@ -1,0 +1,32 @@
+<section class="pb-5 pt-3 bg-gradient-to-t bg-gradient-to-b from-blue-50 to-indigo-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+        <div class="d-flex align-items-center gap-3 mb-4">
+            <span class="category-span text-white rounded-5">
+                {{ post?.acf?.category.name }}
+            </span>
+            <span class="text-gray-500">
+                {{ formatDate(post?.date) }}
+            </span>
+        </div>
+        <h1 class="text-4xl text-5xl-md fw-bold mb-4 leading-tight text-black">
+            {{ post?.title?.rendered }}
+        </h1>
+        <div class="d-flex align-items-center gap-3">
+            <div class="author-img-container">
+                <img src="https://placehold.co/60x40" alt="Viní Viseman" class="me-2 author-img">
+            </div>
+            <div>
+                <p class="fw-bold text-black">Viní Viseman</p>
+                <p class="text-gray-600 text-small">Corredor amador e entusiasta</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<article class="bg-white py-5">
+    <div class="container mx-auto px-4 max-w-48 py-md-2">
+        <div [innerHTML]="post?.acf?.fullcontent"></div>
+    </div>
+</article>
+
+<app-newsletter></app-newsletter>

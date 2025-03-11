@@ -1,0 +1,77 @@
+header {
+  box-shadow: #00000040 -3px 1px 6px 0px;
+}
+
+.visemanTitle {
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(58 134 255 / var(--tw-text-opacity, 1)) !important;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(58 134 255 / var(--tw-text-opacity, 1)) !important;
+}
+
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+#nav-menu {
+  display: none !important;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#nav-menu.active {
+  display: flex !important;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#nav-menu li {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+#nav-menu li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#nav-menu li a:hover {
+  color: #007bff;
+}
+
+.active {
+  color: #007bff !important;
+  font-weight: bold;
+}

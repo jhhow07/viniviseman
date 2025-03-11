@@ -1,0 +1,38 @@
+.accordion {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.accordion-header:hover {
+    background-color: #f3f4f6;
+}
+
+.accordion-content {
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.hidden {
+    display: none;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
